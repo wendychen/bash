@@ -150,12 +150,24 @@ less app.log
 
 -> 重複使用這技能來查詢文件
 
-## wc
+------------------------------------------------
+
+## Bash Scripting
+
+### Analysis
+
+#### wc
 
 指令:
 ```bash
 wc -l config.txt
+wc -w config.txt
 ```
+
+-l 只顯示行數 (lines)
+-w 只顯示詞數 (words)
+-c 只顯示字節數 (characters)
+
 
 結果:
 
@@ -175,6 +187,85 @@ wc config.txt
 40 - bytes -c
 
 第一個3是行數, 第二個3是單詞數, 第三個40是字節數.
+
+練習題:
+```bash
+echo -e "蘋果\n香蕉\n橘子" | wc -l
+```
+
+然後把-l改成-w, -c
+
+
+#### sort
+
+```bash
+echo -e "3\n1\n2\n4\n2\n7\n" | sort -n
+echo -e "3\n1\n2\n4\n2\n7\n" | sort -nr
+```
+
+r是reverse, 倒著排. `sort -n`是正著排.
+
+#### uniq
+
+```bash
+echo -e "wendy\nwendy\nchen\nwendy" | uniq
+echo -e "wendy\nwendy\nchen\nwendy" | uniq -c
+```
+
+-c 可以計算每個unique詞出現的幾次
+
+#### nl
+
+```bash
+echo -e "第一句話\nRUST\n第三句話" | nl
+```
+
+nl是number lines, 可以為每一行加上行號
+
+所以我們也可以這樣做:
+
+```bash
+cat app.log | nl
+```
+
+把app.log裡面的內容取出來, 加上編號.
+
+
+這個語法可以讓所有行都加上編號:
+
+```bash
+nl -ba FILE_NAME
+```
+
+舉例比較:
+
+```bash
+wendy:~/projects/bash$ cat fruit.txt | nl
+     1  apple 10 red
+     2  banana 5 yellow
+
+
+     3  cherry 20 purple
+     4  orange 15 orange
+wendy:~/projects/bash$ cat fruit.txt | nl -ba
+     1  apple 10 red
+     2  banana 5 yellow
+     3
+     4
+     5  cherry 20 purple
+     6  orange 15 orange
+```
+
+
+#### 綜合應用
+
+媽想知道, 一堆水果裡, 每種出現幾次, 從多到少排好, 還編上號:
+
+```bash
+echo -e "蘋果\n香蕉\n蘋果\n橘子\n蘋果\n香蕉" | sort | uniq -c | sort -nr | nl
+```
+
+-------------------------------------------------
 
 
 
