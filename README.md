@@ -152,11 +152,11 @@ less app.log
 
 ------------------------------------------------
 
-## Bash Scripting
+# Bash Scripting
 
-### Analysis
+## Analysis
 
-#### wc
+### wc
 
 指令:
 ```bash
@@ -196,7 +196,7 @@ echo -e "蘋果\n香蕉\n橘子" | wc -l
 然後把-l改成-w, -c
 
 
-#### sort
+### sort
 
 ```bash
 echo -e "3\n1\n2\n4\n2\n7\n" | sort -n
@@ -205,7 +205,7 @@ echo -e "3\n1\n2\n4\n2\n7\n" | sort -nr
 
 r是reverse, 倒著排. `sort -n`是正著排.
 
-#### uniq
+### uniq
 
 ```bash
 echo -e "wendy\nwendy\nchen\nwendy" | uniq
@@ -214,7 +214,7 @@ echo -e "wendy\nwendy\nchen\nwendy" | uniq -c
 
 -c 可以計算每個unique詞出現的幾次
 
-#### nl
+### nl
 
 ```bash
 echo -e "第一句話\nRUST\n第三句話" | nl
@@ -257,7 +257,7 @@ wendy:~/projects/bash$ cat fruit.txt | nl -ba
 ```
 
 
-#### 綜合應用
+### 綜合應用
 
 媽想知道, 一堆水果裡, 每種出現幾次, 從多到少排好, 還編上號:
 
