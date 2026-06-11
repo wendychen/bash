@@ -167,6 +167,8 @@ okular.exe learning_log.pdf
 然後在.md的開頭寫YAML的資訊, 包含指定顯示的中文字型. 然後用okular這個軟體查看pdf.
 okular這個軟體可以做annotation
 
+朋友說直接用font? 還不懂.
+
 ## fc-list
 
 ```bash
