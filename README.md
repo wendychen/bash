@@ -42,6 +42,7 @@ stat file.txt  # 查看時間戳
 
 結果:
 
+```bash
 wendy:~/projects/bash$ stat file1.txt
   File: file1.txt
   Size: 0               Blocks: 0          IO Block: 4096   regular empty file
@@ -51,7 +52,7 @@ Access: 2026-06-10 20:39:31.821512998 -0700
 Modify: 2026-06-10 20:39:31.821512998 -0700
 Change: 2026-06-10 20:39:31.821512998 -0700
  Birth: 2026-06-10 20:39:31.821512998 -0700
-
+```
 
 Access (atime): 最後訪問時間
 Modify (mtime): 內容最後修改時間
@@ -105,8 +106,10 @@ echo "My name is $name"
 
 單引號與雙引號的區別:
 
+```bash
 echo "My name is $name."
 echo 'My name is $name.'
+```
 
 雙引號會解析variable, 單引號會原樣輸出.
 
