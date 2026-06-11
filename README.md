@@ -137,6 +137,26 @@ echo "第二行" >> note.txt
 在文件末尾新增內容, 不破壞原內容.
 
 
+#### var + 重定向
+
+```bash
+echo "Today is $(date)"
+```
+
+這樣可以抓date. AI說是寫日誌, 寫腳本的經典用法.
+
+
+```bash
+wendy:~/projects/bash$ echo "current dir is $(pwd)"
+current dir is /home/wendy/projects/bash
+```
+
+```bash
+logfile="app.log"
+echo "$(date) 程序啟動" >> "$logfile"
+```
+
+這樣可以在$logfile這個檔案的最後一行加入一個包含時間的log
 
 ### rmdir
 
@@ -267,13 +287,18 @@ tail -n -30 us_tax_tool2.md | head -n 20
 
 # less
 
+俗話說 less is more.
+more 這個指令 只能往下翻
+less 這個指令 可以上下翻
+
+
 less 算是...閱讀器?
 
 ```bash
 less numbers.txt
 ```
 
-進去之後, j下一行, k上一行, 空格 到下一頁, b 回上一頁, q退出
+進去之後, j 下一行, k 上一行, space 到下一頁, b 回上一頁, q 退出, /關鍵字 搜尋關鍵字, n 下一個搜尋結果
 
 ```bash
 less app.log
@@ -282,6 +307,28 @@ less app.log
 輸入/ERROR 搜索"ERROR"字串, 所有匹配結果會反白, n跳到下一個匹配, N跳到上一個匹配
 
 -> 重複使用這技能來查詢文件
+
+```bash
+less -N README.md    # 顯示行號
+less -S README.md    # 長行不換行(橫向截斷)
+```
+
+練習: 找到使用者名稱在第幾行:
+
+```bash
+less -N /etc/passwd
+```
+進入之後, 輸入 /your_username 搜尋
+
+練習: 用管線把`ls -la /etc`的結果丟給`less`翻頁看:
+
+```bash
+ls -la /etc | less
+```
+
+# more
+
+因為less比較多功能. 知道有more這個指令就好了
 
 ------------------------------------------------
 
