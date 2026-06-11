@@ -1,7 +1,7 @@
 ---
 title: "Learning Log"
 author: "Wendy Chen"
-date: "2026-06-06"
+date: "`git log -1 --format=%ad --date=short`"
 CJKmainfont: "WenQuanYi Zen Hei Mono"
 fontsize: 12pt
 linestretch: 1.5
