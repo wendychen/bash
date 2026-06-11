@@ -10,6 +10,111 @@ geometry: margin=2.5cm
 
 # Bash
 
+## Files & Directories
+
+### pwd
+
+pwd = print working directory, 顯示當前工作目錄
+
+-L logical (default) - 你看起來在哪
+-P physical          - 你實際上在哪 (不明白. what's the difference?)
+
+```bash
+echo $PWD	# 環境變量, 等同於 pwd -L (什麼意思?)
+echo $OLDPWD	# 上一個工作目錄 (什麼叫 "cd - 就是利用它"?)
+```
+
+### touch
+
+touch 創建空文件, 修改時間戳(timestamp)
+
+```bash
+touch file.txt		# 
+touch a.txt b.txt c.txt # 一次創建3個txt file, 分別為 a.txt, b.txt, c.txt
+touch file{1..5}.txt	# 創建 file1.txt ~ file5.txt
+```
+
+文件有3種時間戳:
+
+```bash
+stat file.txt  # 查看時間戳
+```
+
+結果:
+
+wendy:~/projects/bash$ stat file1.txt
+  File: file1.txt
+  Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: 8,48    Inode: 12030       Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/   wendy)   Gid: ( 1000/   wendy)
+Access: 2026-06-10 20:39:31.821512998 -0700
+Modify: 2026-06-10 20:39:31.821512998 -0700
+Change: 2026-06-10 20:39:31.821512998 -0700
+ Birth: 2026-06-10 20:39:31.821512998 -0700
+
+
+Access (atime): 最後訪問時間
+Modify (mtime): 內容最後修改時間
+Change (ctime): metadata? 權限等等? 最後變更時間. touch無法直接改ctime.
+
+.821512998 這是小數點後9位的奈秒級精度.
+-0700表示PDT.
+
+touch 可以指定時間格式, 修改時間. 目前我還沒學.
+
+
+### echo
+
+```bash
+echo "Hello World"
+```
+
+echo 讓我感覺像是C裡面的printf
+
+
+```bash
+echo -n "Hello
+echo " World"
+```
+
+這樣 Hello 之後就不換行.
+
+轉譯字符:
+
+```bash
+echo -e "Hello\nWorld"
+```
+
+輸出是Hello和World各占一行.
+
+
+不轉譯字符:
+
+```bash
+echo "Hello\nWorld"
+```
+
+輸出 "Hello\nWorld"
+
+### echo與變量
+
+```bash
+name="Wendy"
+echo "My name is $name"
+```
+
+單引號與雙引號的區別:
+
+echo "My name is $name."
+echo 'My name is $name.'
+
+雙引號會解析variable, 單引號會原樣輸出.
+
+
+
+### rmdir
+
+
 ## vim
 
 ```bash
@@ -264,6 +369,9 @@ wendy:~/projects/bash$ cat fruit.txt | nl -ba
 ```bash
 echo -e "蘋果\n香蕉\n蘋果\n橘子\n蘋果\n香蕉" | sort | uniq -c | sort -nr | nl
 ```
+
+nl負責標, wc負責數, sort負責排, uniq負責併.
+遵守Unix哲學: 每個指令只做一件事, 用管道 | 串起來, 成了分析流水線.
 
 -------------------------------------------------
 
