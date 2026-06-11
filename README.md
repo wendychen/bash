@@ -97,7 +97,7 @@ echo "Hello\nWorld"
 
 輸出 "Hello\nWorld"
 
-### echo與變量
+#### echo與變數名稱
 
 ```bash
 name="Wendy"
@@ -112,6 +112,25 @@ echo 'My name is $name.'
 ```
 
 雙引號會解析variable, 單引號會原樣輸出.
+
+
+變數名稱邊界問題:
+
+```bash
+file="report"
+echo "$file_2026"
+echo "${file}_2026"
+```
+
+#### echo與重定向
+
+echo "第一行" > note.txt
+
+如果文件不存在, 創建文件; 如果文件存在, 清空原內容再寫入.
+
+echo "第二行" >> note.txt
+
+在文件末尾新增內容, 不破壞原內容.
 
 
 
