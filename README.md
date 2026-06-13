@@ -160,6 +160,41 @@ echo "$(date) 程序啟動" >> "$logfile"
 
 ### rmdir
 
+只能刪除空目錄, 裡面有東西就會報錯.
+加入 -p 參數會從最裡面往外刪, 把一串空目錄都刪掉.
+
+
+
+### cd
+
+```bash
+cd - 
+```
+
+回到上一個目錄. 如果輸入兩次 `cd -`就會在兩個目錄之間彈跳
+
+### pushd, popd
+
+pushd 是把當前目錄的路徑push到stack, popd是把stack裡的最上層路徑pop出來.
+
+舉個例子:
+
+```
+cd ~/practice/project
+
+pushd src/components         # 跳到 components，同時把之前的位置壓入Stack
+pwd
+
+pushd ~/practice/project/logs   # 再跳到 logs，又壓一次 Stack
+pwd
+
+popd                         # 彈出 Stack 頂，回到 components
+pwd
+
+popd                         # 再彈，回到 project
+pwd
+```
+
 
 ## vim
 
@@ -465,12 +500,25 @@ it saves cpu & gpu (i guess).
 
 ## grep v.s. find
 
-grep 是找內容, find 是找文件
+grep 是找內容, find 是找文件.
+
+grep 是在文件內容裡搜尋.
 
 ## grep
 
 grep [什麼參數] [查找什麼內容] [在什麼位置]
 e.g.
+
+```bash
+cd ~/practice/project
+grep "ERROR" logs/server.log
+```
+
+相當於先移動到 ~/practice/project
+然後使用grep, 找出 logs/server.log 這份文件裡面包含 ERROR 的所有lines
+
+我們可以加入一些常用參數, 例如 -n 顯示行號, -i 忽略大小寫. 也可以組合參數, 例如 -ni 就是顯示行號並且忽略大小寫.
+
 
 ```bash
 grep -ic "info" ~/exam/logs/app.log
@@ -488,7 +536,35 @@ grep -rin "tax" .
 history | grep "grep"
 ```
 
+```bash
+grep -r "React" src/
+```
+
+-r 是遞迴搜索. 這行指令是, 在 src/ 這資料夾裡面搜索,
+搜索 React 這個詞, 包含這個詞的那個line, 列出path和內容.
+
+
 ## find
+
+find 從哪找 -條件
+
+
+```bash
+find . -name "*.js"
+```
+
+從當前目錄及其子目錄, 找出所有.js的文件
+
+
+```bash
+find ~/practice -type f
+```
+
+在 ~/practice 這個目錄下, 了解什麼的type?
+f = file (一般檔案)
+`-type f` 只搜尋普通檔案(regular file)
+
+
 搜尋最近7天改過的文件. mtime = modify time
 
 ```bash
