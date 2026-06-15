@@ -157,6 +157,7 @@ You can access the roadmap here, and learn by yourself: https://roadmap.sh/shell
 `apt`, `brew`, `yum`, `dnf`
 
 ### Networking
-`ping`, `curl`, `wget`, `ssh
+`ping`, `curl`, `wget`, `ssh`
+
 ### File Compression
 `tar`, `zip`, `unzip`, `gzip`, `gunzip`, `bzip2`, `xz`
