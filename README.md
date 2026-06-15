@@ -20,7 +20,7 @@ You can access the roadmap here, and learn by yourself: https://roadmap.sh/shell
 
 ## Files & Directories
 
-`pwd`, `mkdir`, `mv`, `le`, `touch`, `op`, `cd`, rm`, `cat`, `echo`, `rmdir`, `find`
+`pwd`, `mkdir`, `mv`, `le`, `touch`, `op`, `cd`, `rm`, `cat`, `echo`, `rmdir`, `find`
 
 ## Tab Completion
 ## Repeat Commands
