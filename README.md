@@ -11,13 +11,7 @@ You can access the roadmap here, and learn by yourself: https://roadmap.sh/shell
 
 ## Popular Shells
 
-- dash
-- bash
-- zsh
-- fish
-- tcsh
-- ksh
-- cmd
+`dash`, `bash`, `zsh`, `fish`, `tcsh`, `ksh`, `cmd`
 
 ## PowerShell
 ## Setting Up Bash
@@ -26,15 +20,11 @@ You can access the roadmap here, and learn by yourself: https://roadmap.sh/shell
 
 ## Files & Directories
 
-- pwd
-- mkdir
-- mv
-- le
-- touch
-- op
-- cd
-- rm
-- cat
-- echo
-- rmdir
-- find
+`pwd`, `mkdir, `mv`, `le`, `touch`, `op, `cd`, rm`, `cat`, `echo`, `rmdir`, `find`
+
+## Tab Completion
+## Repeat Commands
+## Help Commands
+## Bash Alias
+## Stop Execution
+
