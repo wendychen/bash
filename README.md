@@ -26,5 +26,121 @@ You can access the roadmap here, and learn by yourself: https://roadmap.sh/shell
 ## Repeat Commands
 ## Help Commands
 ## Bash Alias
-## Stop Execution
 
+## Stop Execution
+### Redirects & Pipelines
+
+- `stdin`, `stdout`, `stderr`
+- Output redirection
+- Input redirection
+- Error redirection
+- Pipes
+- Command substitution
+- Process substitution
+
+## Bash Scripting
+## Working with Text
+
+### View & Search
+
+`grep`, `less`, `more`, `head`, `tail`, `find`
+
+### Text Transform
+
+`cut`, `paste`, `join`, `split`, `tr`, `sed`, `awk`
+
+### Analysis
+
+`wc`, `sort`, `uniq`, `nl`
+
+### Wildcards
+
+`*`, `?`, `[...]`, `{...}
+
+## Text Editors
+`Nano`, `Vim`, `Emacs`, `Vi`
+
+## Basic Editor Ops.
+## Bash Script Anatomy
+## Running Shell Scripts
+
+- Direct Execution
+- Running with Bash
+- Running with Source
+
+## Variables
+- Environment vs Shell vars.
+- Create, Print, Modify
+- Variable Scopes
+- Special variables
+- Variables best practices
+
+## Bash Data Types
+- Strings
+- Numeric
+- Arrays
+- Associative Arrays
+
+## Comments
+## Bash Operators
+- Arithmetic
+- Comparison
+- String operators
+- Logical
+- File test
+
+## Input/Output
+### Working with Numerics
+- Arithmetic expansion
+- expr
+- bc
+- let
+- awk
+
+## String Manipulation
+- String length
+- Substring extraction
+- Pattern replacement
+- Case conversion
+
+## Exit Codes
+- $?
+- exit
+- Success vs failure
+
+## Script Arguments
+- $1, $2, $3
+- $0
+- $@
+- $*
+- $#
+- shift
+
+## File Permissions
+`rwx`, `chmod`, `chown`, `chgrp`
+
+## Conditionals
+`if`, `case`
+
+## Loops
+`for`, `while`, `until`, `break`, `continue`
+
+## Functions
+- Function Scopes
+- Recursive Functions
+
+## Advanced Scripting
+
+## Error Handling
+`set -e`, `set -o`, `set -u`, `trap`, `Error logging`
+
+## Debugging
+`set -x`, `bash -n`, `sellcheck`, `Bash Debug`
+
+## Regular Expressions
+- Basic regex syntax
+- Extended regex
+
+## Process Management
+- `jobs`, `nohup`, `fg`, `bg`, `disown`
+- Process substitution
