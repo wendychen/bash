@@ -483,9 +483,6 @@ echo -e "蘋果\n香蕉\n蘋果\n橘子\n蘋果\n香蕉" | sort | uniq -c | sort
 nl負責標, wc負責數, sort負責排, uniq負責併.
 遵守Unix哲學: 每個指令只做一件事, 用管道 | 串起來, 成了分析流水線.
 
--------------------------------------------------
-
-
 
 ## mkdir
 
@@ -497,6 +494,70 @@ mkdir -p ~/exam/{logs,src/{java,python},config,backup}
 
 a simple way to represent a tree structure in one line.
 it saves cpu & gpu (i guess).
+
+
+--
+# Working with Text
+
+## combination skill
+
+grep + head + tail + find + cut + paste + join + split + tr + sed + awk
+
+
+先建立一個練習文件:
+
+```bash
+cat > staff.txt << 'EOF'
+101,Alice,Engineering,90000
+102,Bob,Marketing,75000
+103,Carol,Engineering,95000
+104,Dave,Marketing,70000
+105,Eve,Engineering,88000
+EOF
+```
+
+找出所有的Engineering:
+
+```bash
+grep "Engineering" staff.txt
+```
+
+打印staff.txt的首三行:
+
+```bash
+head -n 3 staff.txt
+```
+
+打印staff.txt的末兩行:
+
+```bash
+tail -n 2 staff.txt
+```
+
+在當前目錄中找尋所有.txt文件:
+
+```bash
+find . -name "*.txt"
+```
+
+在staff.txt這份文件中, 只取出名字:
+
+```bash
+cut -d',' -f2 staff.txt
+```
+
+在staff.txt這份文件中, 首先, 只cut出名字, 存到name.txt.
+接著, 只cut出名字, 存到salaries.txt.
+之後, 把name.txt 和 salaries.txt paste在一起打印:
+
+```bash
+cut -d',' -f2 staff.txt > names.txt
+cut -d',' -f4 staff.txt > salaries.txt
+paste names.txt salaries.txt
+```
+
+
+
 
 ## grep v.s. find
 
@@ -592,6 +653,16 @@ find . -name "*.xx" -exec 命令 {} \;
 
 {} => 找到的每個文件
 \; => 命令結束
+
+後面這行 find + exec 就是找到檔案並且做事.
+舉一個例子：
+
+```bash
+find ~/findlab -name "*.log" -exec echo "找到了：" {} \;
+```
+
+先從findlab這個資料夾裡面，遞迴找出所有.log檔案，接著執行命令：
+對於找到的每一個檔案，echo `找到了：` 加上檔案名稱，最後的 `\`代表命令結束。
 
 
 使用find找出~/exam 下的所有directory:
