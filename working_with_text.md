@@ -159,6 +159,8 @@ cat > staff.txt << 'EOF'
 EOF
 ```
 
+### View & Search
+
 找出所有的Engineering:
 
 ```bash
@@ -183,6 +185,8 @@ tail -n 2 staff.txt
 find . -name "*.txt"
 ```
 
+### Text Transform
+
 在staff.txt這份文件中, 只取出名字:
 
 ```bash
@@ -199,6 +203,42 @@ cut -d',' -f4 staff.txt > salaries.txt
 paste names.txt salaries.txt
 ```
 
+join 用共同字段合併兩個文件:
+
+```bash
+cat > dept.txt << 'EOF'
+Engineering NewYork
+Marketing London
+EOF
+
+awk -F',' '{print $3,$2}' staff.txt | sort > staff_dept.txt
+sort dept.txt > dept_sorted.txt
+join staff_dept.txt dept_sorted.txt
+```
+
+split 把文件每2行切成小文件:
+
+```bash
+split -l 2 staff.txt part_
+cat part_aa
+cat part_ab
+```
+
+tr - 把所有小寫換成大寫
+
+```bash
+cat staff.txt | tr 'a-z' A-Z'
+```
+
+sed - 把 Marketing 全部換成 Sales
+
+```bash
+sed 's/Marketing/Sales/g' staff.txt
+```
+
+```bash
+awk -F',' '$4 > 80000 {print $2, $4}' staff.txt
+```
 
 
 
