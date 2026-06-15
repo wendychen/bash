@@ -104,16 +104,16 @@ You can access the roadmap here, and learn by yourself: https://roadmap.sh/shell
 - Case conversion
 
 ## Exit Codes
-- $?
+- `$?`
 - exit
 - Success vs failure
 
 ## Script Arguments
-- $1, $2, $3
-- $0
-- $@
-- $*
-- $#
+- `$1`, `$2`, `$3`
+- `$0`
+- `$@`
+- `$*`
+- `$#`
 - shift
 
 ## File Permissions
@@ -144,3 +144,19 @@ You can access the roadmap here, and learn by yourself: https://roadmap.sh/shell
 ## Process Management
 - `jobs`, `nohup`, `fg`, `bg`, `disown`
 - Process substitution
+
+## System Admin
+
+### System Monitoring
+`ps`, `top`, `htop`, `free`, `df`, `du`, `uptime`, `iostat`, `vmstat`
+
+### Task Schedulling
+`cron`, `crontab`, `at`, `systemd timers`
+
+## Package Management
+`apt`, `brew`, `yum`, `dnf`
+
+### Networking
+`ping`, `curl`, `wget`, `ssh
+### File Compression
+`tar`, `zip`, `unzip`, `gzip`, `gunzip`, `bzip2`, `xz`
