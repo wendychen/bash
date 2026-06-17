@@ -213,6 +213,13 @@ ctrl + d: down
 scrol half the page.
 
 
+在Normal Mode下:
+`0` 移到行首
+`^` 移到行首第一個非空白字元
+`$` 移到行尾
+`A` 移到行尾 + Insert Mode
+
+
 
 ## awk
 

@@ -46,3 +46,13 @@ aliases 是別名.
 輸入 `alias`查看所有alias.
 輸入 `unalias ll`取消 `ll` 這個alias.
 
+#### Custom Functions
+
+例如說, 在`~/.bashrc`裡面設置 `mkcd()`, 建立資料夾, 然後直接進去:
+
+```bash
+mkcd() {
+    mkdir -p "$1"
+    cd "$1"
+}
+```
