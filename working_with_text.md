@@ -354,22 +354,58 @@ find ~/findlab -name "*.log" -exec echo "找到了：" {} \;
 find ~/exam/ -type d
 ```
 
-## Job Control
+## Wildcards
+
+Wildcards 大陸叫做"通配符".
+
+### *
+
+星號是隨便什麼都行.
+
+### ?
+
+問號是單一替代符.
 
 
-你是廚房老闆(bash), 你手下有很多的任務(job),
-比如:煮一鍋湯, 炒一盤菜.
+### [...]
 
-前台 foreground: 這道菜正站著你全部注意力, 你站旁邊盯著它, 別的啥也幹不了.
-後台 background: 這道菜丟一邊自己慢慢燉, 你騰出手去幹別的.
-掛起 suspend: 把火關了, 菜暫停在那兒, 等你回頭處理.
+方括號是 只代表括號內列出的其中1個字符.
 
-所以, fg就是拉到前台, bg就是拉去後台, Ctrl+Z暫停當前任務, 像是關火.
-jobs看看現在有那些任務
+例如說:
 
-[1] 25647
+```bash
+ls file[123].txt
+```
 
-代表是Job 1, 然後Process ID是25647
+合法的是 `file1.txt`, `file2.txt` 和 `file3.txt`
 
+也可以改成寫範圍, 例如說:
+
+```bash
+ls file[a-z].txt
+ls file[0-9].txt
+```
+從括號內指定的範圍中挑選的任一個字符皆合法.
+
+### {...}
+
+花括號是"手動列表符".
+就是自己列出自己想要打撈/創建的東西.
+例如說:
+
+```bash
+ls {cat,dog,bird}.txt
+```
+
+就會列出 `cat.txt`, `dog.txt` 和 `bird.txt`
+並且, 逗號的之前和之後是不能有空白的.
+
+我們也可以用{...}一次建立三個文件, 例如:
+
+```bash
+mkdir folder{1,2,3}
+```
+
+就會建立 `folder1`, `folder2` 和 `folder3`.
 
 
