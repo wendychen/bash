@@ -525,5 +525,5 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
 ```
-
+如果要查看單個alias, 可以打`alias 名字`.
 
