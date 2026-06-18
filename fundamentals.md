@@ -502,4 +502,28 @@ mkdir -p ~/exam/{logs,src/{java,python},config,backup}
 a simple way to represent a tree structure in one line.
 it saves cpu & gpu (i guess).
 
+## Bash Alias
+
+基本上有alias和unalias
+
+指令例如：
+
+```bash
+alias ll='ls -la'
+alias gs='git status'
+unalias gs
+```
+如果要看所有的alias, 就輸入 `alias`.
+我目前的一些alias:
+
+```
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+```
+
 
