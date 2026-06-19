@@ -1,6 +1,6 @@
-## Setting Up Bash
+# Setting Up Bash
 
-### .bashrc
+## .bashrc
 
 Linux:
 ~/.bashrc
@@ -19,7 +19,7 @@ source ~/.bashrc
 
 rc stands for?
 
-### Customize Prompt
+## Customize Prompt
 
 Default:
 
@@ -39,14 +39,14 @@ PS1="\u @ \w $ "
 `\w` - working directory
 `\t` - time
 
-### aliases
+## aliases
 
 aliases 是別名.
 
 輸入 `alias`查看所有alias.
 輸入 `unalias ll`取消 `ll` 這個alias.
 
-#### Custom Functions
+## Custom Functions
 
 例如說, 在`~/.bashrc`裡面設置 `mkcd()`, 建立資料夾, 然後直接進去:
 

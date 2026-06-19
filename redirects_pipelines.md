@@ -1,6 +1,6 @@
-## Redirects & Pipelines
+# Redirects & Pipelines
 
-### Standard Streams (stdin/stdout/stderr)
+## Standard Streams (stdin/stdout/stderr)
 
 每個程式運行時, Linux都自動給它打開三條通道:
 
@@ -13,7 +13,7 @@ stderr		2	終端屏幕	 程序錯誤輸出
 鍵盤 -> [ stdin (0) ] -> 程序 -> [ stdout (1) ] -> 屏幕
 			     --> [ stderr (2) ] -> 屏幕
 
-### stdout 重定向 `>`
+## stdout 重定向 `>`
 
 ```bash
 >  	# 輸出重定向 (覆蓋)
@@ -46,7 +46,7 @@ printf " world\n" >> output.txt
 cat output.txt
 ```
 
-### stderr 重定向 `2>`
+## stderr 重定向 `2>`
 
 ```bash
 ls 不存在的文件 2> error.txt
@@ -60,7 +60,7 @@ cat error.txt
 所以透過 `2> error.txt` 可以寫入錯誤訊息到error.txt
 
 
-### stdout + stderr 分別重定向
+## stdout + stderr 分別重定向
 
 ```bash
 ls 存在的文件 不存在的文件 > out.txt 2> err.txt
@@ -69,7 +69,7 @@ ls 存在的文件 不存在的文件 > out.txt 2> err.txt
 把 `ls 不存在的文件`的錯誤訊息redirect到err.txt
 
 
-### stdout + stderr 合併
+## stdout + stderr 合併
 
 ```bash
 # 把 stderr 合并到 stdout（最常用写法）
@@ -80,7 +80,7 @@ ls 存在的文件 不存在的文件 &> all.txt
 ```
 2>&1 意思是：把2号通道 接到 1号通道现在指向的地方
 
-### stdin 重定向 `<`
+## stdin 重定向 `<`
 
 ```bash
 # 从文件读取输入，而不是键盘
@@ -90,7 +90,7 @@ cat < input.txt
 sort < names.txt
 ```
 
-### 丟棄輸出（黑洞） `/dev/null`
+## 丟棄輸出（黑洞） `/dev/null`
 
 ```bash
 # 不想看到正常输出
@@ -103,7 +103,7 @@ ls 不存在 2> /dev/null
 ls 不存在 &> /dev/null
 ```
 
-### 管道 `|` （stdout 接 stdin）
+## 管道 `|` （stdout 接 stdin）
 
 ```bash
 # 把前一个命令的 stdout 接到下一个命令的 stdin
@@ -111,7 +111,7 @@ cat file.txt | grep "hello" | sort | uniq
 #     ↓stdout      ↓stdin stdout↓    ↓stdin
 ```
 
-### 總結一張圖
+## 總結一張圖
 
 ```bash
 命令 < input.txt	# stdin 從文件讀

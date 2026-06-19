@@ -1,17 +1,6 @@
----
-title: "Learning Log"
-author: "Wendy Chen"
-date: "`git log -1 --format=%ad --date=short`"
-CJKmainfont: "WenQuanYi Zen Hei Mono"
-fontsize: 12pt
-linestretch: 1.5
-geometry: margin=2.5cm
----
-
-# Bash
+# Progress Management
 
 ## Job Control
-
 
 你是廚房老闆(bash), 你手下有很多的任務(job),
 比如:煮一鍋湯, 炒一盤菜.

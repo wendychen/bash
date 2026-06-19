@@ -1,4 +1,4 @@
-## STOP EXECUTION
+# STOP EXECUTION
 
 `exit` 後面帶的數字, 就叫做 Exit Code.
 

@@ -1,13 +1,3 @@
----
-title: "Learning Log"
-author: "Wendy Chen"
-date: "`git log -1 --format=%ad --date=short`"
-CJKmainfont: "WenQuanYi Zen Hei Mono"
-fontsize: 12pt
-linestretch: 1.5
-geometry: margin=2.5cm
----
-
 # Networking
 
 ## ping
