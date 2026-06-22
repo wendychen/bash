@@ -202,6 +202,16 @@ ctrl + d: down
 
 scrol half the page.
 
+選取+刪除
+
+v -> 方向鍵 -> d
+目前可能用的不是最有效率的方式.
+有的時候還需要 Esc -> $ -> v -> 方向鍵 -> d
+
+複製+貼上
+
+Normal -> yy -> p
+
 
 在Normal Mode下:
 `0` 移到行首
