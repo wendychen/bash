@@ -16,6 +16,10 @@ vim file1.txt file2.txt file3.txt
 
 Insert Mode -> `Ctrl+R + =` => 輸入數值 -> 輸出的數值會顯示在文件中
 
+怎麼在ubuntu的terminal中進行計算?
+
+1. 直接 `echo $((3+2))` 計算
+2. bc (如果沒有安裝sudo apt-get install bc)
 
 怎麼自動備份?
 

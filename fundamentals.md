@@ -126,6 +126,14 @@ echo "第二行" >> note.txt
 
 在文件末尾新增內容, 不破壞原內容.
 
+#### echo combination
+
+```bash
+echo {A..C}{1..2}
+```
+
+結果是:
+A1 B1 C1 A2 B2 C2
 
 #### var + 重定向
 
