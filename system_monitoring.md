@@ -28,4 +28,21 @@ uptime -V
 我得到的結果是`update from procps-ng 4.0.4`, 是什麼意思呢?
 `procps-ng 4.0.4`是什麼意思呢?
 
+## watch
+
+我的理解:
+可以 `watch ls`, 但是不能 `watch ll`, 也就是說無法 `watch` 某個 alias. 
+
+Gemini說是, watch常用在:
+
+- 監控系統資源
+- 監控進度或狀態
+- 監控API或網路服務
+
+## crontab
+
+先用 `crontab -e` 進入定時任務頁面, 再設定什麼時間要做什麼.
+我自己嘗試了crontab東西, 然後用`watch ls`監看變化, 是成功的.
+問AI是不是好的做法. 結果查到watch的其他用法. 
+
 
