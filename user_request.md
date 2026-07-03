@@ -1,3 +1,8 @@
+### 為什麼我kill process 之後, process 還在?
+
+預設訊號被忽略, Zombie 狀態, Kernel Lock等因素.
+可以改成`kill -9 2297`, 強制執行2297這個process. 其他process同理, 將2297替換成對應的process id.
+
 ### bash 找出資料夾中最後更新的10個.md file
 
 ```bash
