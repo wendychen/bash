@@ -1,5 +1,34 @@
 # System Monitoring
 
+## ps 
+
+```bash
+ps aux
+```
+
+a = all the user
+u = user
+x = include those processes that doesn't have the terminal.
+
+這是排查誰在吃CPU.
+
+ps 是顯示正在運行的process.
+
+## top
+
+top 是real-time monitoring. 顯示的是系統的processes?
+
+top 之後, 按P是 sort by CPU, 按M是sort by memory.
+也可以 `-u` 只監看某user的process, 或者`-p`只監看指定PID.
+`q` 離開程序.
+
+## htop
+
+htop 是需要sugo apt install htop 去安裝的.
+彩色版的top.
+F5樹狀顯示, F6選排序欄位.
+例如說F3搜尋grok, F5切換成tree view.
+
 ## free
 ```bash
 free -htw -s 2 -c 3
