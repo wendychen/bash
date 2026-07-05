@@ -9,6 +9,23 @@
 ls -lt *.md | head -n 10
 ```
 
+ls = list files
+-l = long format
+-t = sort by time
+*.md = wildcard (only .md files)
+
+也可以改成
+```bash
+ls -ltr *.md | head -n 10
+```
+r = reverse the sort, 這樣是oldest first
+
+```bash
+ls -lS *.md | head -n 10
+```
+
+S = sort by size, 這樣是largest files first
+
 ### 怎麼計算當前folder內多少檔案?
 
 ```bash
