@@ -1,7 +1,14 @@
+
 This repository is my learning journey based on the shell-bash roadmap provided by roadmap.sh
 You can access the roadmap here, and learn by yourself: https://roadmap.sh/shell-bash
 
 # Shell/Bash
+
+## Learning Resources
+
+1. [Roadmap.sh](https://roadmap.sh/shell-bash)
+2. [Killercode.com](https://killercoda.com)
+
 
 ## Introduction
 
