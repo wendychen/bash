@@ -1,3 +1,7 @@
+### vim 跳到第n行
+
+normal mode -> `:n`
+
 ### 為什麼我kill process 之後, process 還在?
 
 預設訊號被忽略, Zombie 狀態, Kernel Lock等因素.
