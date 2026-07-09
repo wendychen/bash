@@ -23,6 +23,19 @@ ttl=111:               ttl = time to live, 存活時間. 表示這個packet還�
                        初始值通常是 64/128/255, 這裡是111, 表示中途經過了一些router跳轉.
 time:                  10.9ms, 往返時間. 從發出到收回回覆花了10.9ms.
 
+## curl
+
+cURL = Client for URLs.
+用於在terminal與remote server之間傳輸資料.
+它就像是 terminal 裡面的 browser.
+專門用來 send HTTL request, like GET, POST, to call API, to download and upload files,
+totally no need GUI at all.
+
+## wget
+
+## ssh
+
+## scp
 
 ## rsync
 
@@ -60,5 +73,3 @@ ss -tulnp
 第一行代表ip配置對不對? (不知道什麼意思.)
 第二行問的是, 網關路由在不在?
 第三行問的是, 服務端口起來沒?
-
-

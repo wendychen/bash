@@ -2,6 +2,10 @@
 
 normal mode -> `:n`
 
+### vim 加上行號
+
+:set nu
+
 ### 為什麼我kill process 之後, process 還在?
 
 預設訊號被忽略, Zombie 狀態, Kernel Lock等因素.

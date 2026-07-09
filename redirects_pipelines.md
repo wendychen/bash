@@ -124,3 +124,20 @@ cat file.txt | grep "hello" | sort | uniq
 命令1 | 命令2		# stdout 接到下一個 stdin
 ```
 
+## 問題
+
+Q: 你運行一個命令 ls /home /notexist，其中 /notexist 目錄不存在。請寫出一條命令，把正常輸出存到 output.txt，把錯誤資訊存到 error.txt
+
+A:
+```bash
+ls /home /notexist > output.txt 2> error.txt
+```
+
+Q: 有一個文件 data.csv，內容以逗號（,）分隔。請寫一條 cut 命令，只提取每一行的第 2 個欄位。
+
+A:
+```bash
+cut -d ',' -f 2 data.csv
+```
+
+
