@@ -173,7 +173,9 @@ tail -n 2 staff.txt
 find . -name "*.txt"
 ```
 
-### Text Transform
+## Text Transform
+
+### cut
 
 在staff.txt這份文件中, 只取出名字:
 
@@ -190,6 +192,8 @@ cut -d',' -f2 staff.txt > names.txt
 cut -d',' -f4 staff.txt > salaries.txt
 paste names.txt salaries.txt
 ```
+
+### join
 
 join 用共同字段合併兩個文件:
 
@@ -396,4 +400,53 @@ mkdir folder{1,2,3}
 
 就會建立 `folder1`, `folder2` 和 `folder3`.
 
+### tr
 
+將字母轉換成大小寫的.
+tr代表translate或者transliterate.
+
+例如:
+```bash
+cat text.txt | tr 'a-z' 'A-Z'
+```
+將`text.txt`裡面所有的小寫轉成大寫.
+
+
+## Question List
+
+
+Q: 請寫出命令，將文件 text.txt 中所有的小寫字母轉換成大寫字母並顯示在螢幕上。
+
+A: `cat text.txt | tr 'a-z' 'A-Z'` 或者 `tr 'a-z' 'A-Z' < text.txt`
+
+
+Q: 有一個文件 data.csv，內容用逗號分隔，如下：
+
+```csv
+name,age,city
+Amy,25,Taipei
+```
+
+請寫出命令，只提取第 1 欄和第 3 欄（name 和 city）。
+
+```bash
+cut -d ',' -f 1,3 data.csv
+```
+（-d 指定分隔符號為逗號，-f 1,3 指定要第 1、3 欄）
+
+
+Q: 你有兩個文件 names.txt 和 scores.txt，想把它們按列合併，並用 Tab 鍵之外的冒號 : 作為分隔符號。請寫出命令。
+
+```bash
+paste -d ':' names.txt scores.txt
+```
+
+（-d ':' 指定分隔符號為冒號）
+
+Q: 有一個文件 nums.txt，每行一個數位（如 10, 2, 33, 4）。請寫出命令，將它們按數字大小從大到小排序。
+
+```bash
+sort -nr nums.txt
+```
+
+（-n 按數字排序，-r 逆序即從大到小）

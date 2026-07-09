@@ -140,4 +140,8 @@ A:
 cut -d ',' -f 2 data.csv
 ```
 
+Q: 有一個日誌文件 server.log。請寫一條 head 命令，只顯示這個文件的前 5 行（提示：使用 -n 選項）。
 
+```bash
+head -n 5 server.log
+```

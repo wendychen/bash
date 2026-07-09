@@ -1,3 +1,5 @@
+## Question List
+
 ### vim 跳到第n行
 
 normal mode -> `:n`
@@ -63,4 +65,7 @@ Insert Mode -> `Ctrl+R + =` => 輸入數值 -> 輸出的數值會顯示在文件
 
 ### 怎麼自動備份?
 
+### 怎麼復原上一個操作?
+
+還原動作： 按下 `Ctrl + _` 或 `Ctrl + /`
 
