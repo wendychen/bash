@@ -1,5 +1,11 @@
 ## Question List
 
+### 查看資料夾名稱
+
+```bash
+du -sh 資料夾名稱
+```
+
 ### vim 跳到第n行
 
 normal mode -> `:n`
@@ -12,6 +18,10 @@ normal mode -> `:n`
 
 預設訊號被忽略, Zombie 狀態, Kernel Lock等因素.
 可以改成`kill -9 2297`, 強制執行2297這個process. 其他process同理, 將2297替換成對應的process id.
+
+### 找出wsl中最後更新的10個folders:
+
+find ~ -type d -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -10 | cut -d' ' -f2-
 
 ### bash 找出資料夾中最後更新的10個.md file
 
